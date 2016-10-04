@@ -32,4 +32,7 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 cnpm install  node-sass --save-dev
 ```
 
+欢迎 添加 qq 1208091722
+ 备注：react 
 
+ 交流 
