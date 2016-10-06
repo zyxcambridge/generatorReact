@@ -1,34 +1,26 @@
 import ReactDOM from 'react-dom';
 import ZyxMain from './components/ZyxMain.js';
-
 import SecondPage from './components/SecondPage.js';
+import About from './components/About.js';
 
 
     import React, { Component } from 'react';
     import { Router, Route, browserHistory, Link } from 'react-router';
     
-    // require('styles/App.scss');
 
     import './styles/RootIndex.css';
     
     const Home = () => <div><h1>Home</h1><Links /></div>;
-    const About = () => <div><h1>About</h1><Links /></div>;
-    const Contact = () => <div><h1>Contact</h1><Links /></div>;
     
-    const Links = () =>
-      <nav  >
-        <Link className="homebar" activeClassName="active" to="/">Home</Link>
-        <Link className="zyxmainbar" activeClassName="active" to="/ZyxMain">ZyxMain</Link>
-        <Link className="secondpagebar" activeClassName="active" to="/SecondPage">SecondPage</Link>
-      </nav>
     
-    class App extends Component {
+    class AppBar extends Component {
       render() {
         return (
+
             <Router history={browserHistory}>
-            <Route path="/" component={Home} />
-            <Route path="/ZyxMain" component={ZyxMain} />
-            <Route path="/SecondPage" component={SecondPage} />
+              <Route path="/" component={About} />
+              <Route path="/ZyxMain" component={ZyxMain} />
+              <Route path="/SecondPage" component={SecondPage} />
             </Router>
 
  
@@ -37,7 +29,7 @@ import SecondPage from './components/SecondPage.js';
       }
     }
     
-    export default App;
+    export default AppBar;
 
 
 
@@ -45,7 +37,7 @@ import SecondPage from './components/SecondPage.js';
 
 
 // ReactDOM.render(<ZyxApp />, document.getElementById('app'));
-ReactDOM.render(<App/>, document.getElementById('app'))
+ReactDOM.render(<AppBar/>, document.getElementById('app'))
 
 
 

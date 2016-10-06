@@ -12,6 +12,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ControllerUnit from './ControllerUnit.js';
 import ImgFigure from './ImgFigure.js';
+import Links from "./Links.js"
 
 //图片数据，从json文件读取
 let imageDatas  = require('../data/imgData.json');
@@ -238,6 +239,8 @@ export default class ZyxAppComponent extends React.Component{
 				<nav className="controller-nav">
 				{controllerUnits}
 				</nav>
+				<Links />
+
 			</section>
 
 			);

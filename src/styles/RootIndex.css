@@ -1,14 +1,48 @@
+html, body {
+    width: 100%;
+    height: 100%;
+
+    background-color: #fff;
+}
+/* bgzyx -- start */
+.bgzyx {
+/*    position: relative;
+
+    width: 100%;
+    height: 680px;
+*/}
+/* bgzyx -- end */
+
+
 .active {
   color: red;
 }
 .homebar {
-  color: white;
+	color: black;
+/*	position: absolute;
+	left: 0;
+	top: 20;
+	width: 100px;
+	height: 100px;
+*/
 }
 .zyxmainbar {
-  color: green;
+	color: green;
+/*	position: absolute;
+	left: 40;
+	top: 40;
+	width: 100px;
+	height: 100px;
+*/
 }
 .secondpagebar {
-  color: yellow;
+	color: yellow;
+/*	position: absolute;
+	left: 60;
+	top: 60;
+	width: 100px;
+	height: 100px;
+*/
 }
 /* navbar -- start */
 .navbarzyx {

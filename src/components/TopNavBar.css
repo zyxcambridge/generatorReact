@@ -1,0 +1,8 @@
+.TopNavBar {
+  border-bottom: 1px solid #95989A;
+  margin-bottom: 0;
+}
+
+.TopNavBar .navbar-brand img {
+  max-height: 100%;
+}
