@@ -8,8 +8,8 @@ import TopNavBar from "./TopNavBar.js"
 
 const Links = () =>
   <nav  >
-    <Link className="homebar" activeClassName="active" to="/">Home</Link>
-    <Link className="zyxmainbar" activeClassName="active" to="/ZyxMain">   ZyxMain1    </Link>
+    <Link className="homebar" activeClassName="active" to="/">主界面</Link>
+    <Link className="zyxmainbar" activeClassName="active" to="/ZyxMain">   照片墙    </Link>
     <Link className="secondpagebar" activeClassName="active" to="/SecondPage">SecondPage</Link>
   </nav>
 

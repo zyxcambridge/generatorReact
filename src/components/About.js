@@ -10,8 +10,11 @@ const About = () => (
 
 
 <div>
-<h1>Home</h1>
-<Links />
+<h1>About</h1>
+
+<nav className="navbarzyx">
+ <Links  />
+</nav>
 
 </div>
 

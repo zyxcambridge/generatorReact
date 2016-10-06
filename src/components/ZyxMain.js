@@ -238,8 +238,12 @@ export default class ZyxAppComponent extends React.Component{
 				</section>
 				<nav className="controller-nav">
 				{controllerUnits}
+
 				</nav>
-				<Links />
+				
+				<nav className="linksapp-nav">
+					<Links/>
+				</nav>
 
 			</section>
 
@@ -248,4 +252,6 @@ export default class ZyxAppComponent extends React.Component{
 	}
 
 }
+
+// <Links className="controller-nav"/>
 

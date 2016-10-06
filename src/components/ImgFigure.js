@@ -52,9 +52,6 @@ var ImgFigure = React.createClass({
 			<figure className = {imgFigureClassName} style = {styleObj} onClick={this.handleClick}>
 				<img onClick = {this.handleClick} src = {this.props.data.imageURL} alt = {this.props.data.title} />
 				<hr />
-				<div className = "test" onClick = {this.navNextPage}>
-				<h5>切换到下一个页面</h5>
-				</div>
 	
 				<figcaption>
 					<h2 className = "img-title"> {this.props.data.title}</h2>
