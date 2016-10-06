@@ -11,6 +11,8 @@ const Links = () =>
     <Link className="homebar" activeClassName="active" to="/">主界面</Link>
     <Link className="zyxmainbar" activeClassName="active" to="/ZyxMain"> <span>照片墙</span>  </Link>
     <Link className="secondpagebar" activeClassName="active" to="/SecondPage"><span>SecondPage</span> </Link>
+    <Link className="secondpagebar" activeClassName="active" to="/ThirdPage"><span>ThirdPage</span> </Link>
+  
   </nav>
 
 export default Links;

@@ -1,7 +1,10 @@
 import ReactDOM from 'react-dom';
 import ZyxMain from './components/ZyxMain.js';
 import SecondPage from './components/SecondPage.js';
+import ThirdPage from './components/ThirdPage.js';
 import Home from './components/Home.js';
+
+
 import './styles/RootIndex.css';
 
 import React, { Component } from 'react';
@@ -15,6 +18,8 @@ class AppBar extends Component {
         <Route path="/" component={Home} />
         <Route path="/ZyxMain" component={ZyxMain} />
         <Route path="/SecondPage" component={SecondPage} />
+        <Route path="/ThirdPage" component={ThirdPage} />
+
       </Router>
     );
   }
