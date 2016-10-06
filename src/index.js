@@ -1,42 +1,28 @@
 import ReactDOM from 'react-dom';
 import ZyxMain from './components/ZyxMain.js';
 import SecondPage from './components/SecondPage.js';
-import About from './components/About.js';
+import Home from './components/Home.js';
+import './styles/RootIndex.css';
+
+import React, { Component } from 'react';
+import { Router, Route, browserHistory, Link } from 'react-router';
 
 
-    import React, { Component } from 'react';
-    import { Router, Route, browserHistory, Link } from 'react-router';
-    
+class AppBar extends Component {
+  render() {
+    return (
+      <Router history={browserHistory}>
+        <Route path="/" component={Home} />
+        <Route path="/ZyxMain" component={ZyxMain} />
+        <Route path="/SecondPage" component={SecondPage} />
+      </Router>
+    );
+  }
+}
 
-    import './styles/RootIndex.css';
-    
-    const Home = () => <div><h1>Home</h1><Links /></div>;
-    
-    
-    class AppBar extends Component {
-      render() {
-        return (
-
-            <Router history={browserHistory}>
-              <Route path="/" component={About} />
-              <Route path="/ZyxMain" component={ZyxMain} />
-              <Route path="/SecondPage" component={SecondPage} />
-            </Router>
-
- 
-
-        );
-      }
-    }
-    
-    export default AppBar;
+export default AppBar;
 
 
-
-
-
-
-// ReactDOM.render(<ZyxApp />, document.getElementById('app'));
 ReactDOM.render(<AppBar/>, document.getElementById('app'))
 
 
