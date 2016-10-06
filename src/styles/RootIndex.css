@@ -1,0 +1,21 @@
+.active {
+  color: red;
+}
+.homebar {
+  color: white;
+}
+.zyxmainbar {
+  color: green;
+}
+.secondpagebar {
+  color: yellow;
+}
+/* navbar -- start */
+.navbarzyx {
+    position: absolute;
+    left: 0;
+    top: 20;
+    width: 200px;
+    height: 680px;
+}
+/* navbar -- end */

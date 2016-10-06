@@ -2,6 +2,12 @@ require('normalize.css/normalize.css');
 // require('styles/ZyxApp.scss');
 require('styles/App.scss');
 
+// 不使用 ES6 的转译器
+var ReactRouter = require('react-router')
+var Router = ReactRouter.Router
+var Route = ReactRouter.Route
+var Link = ReactRouter.Link
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ControllerUnit from './ControllerUnit.js';

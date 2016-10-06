@@ -22,6 +22,13 @@ var ImgFigure = React.createClass({
 		e.stopPropagation();
 	},
 
+	navNextPage:function(e){
+
+		console.log('切换到下一个页面');
+		e.preventDefault();
+		e.stopPropagation();
+	},
+
 	render:function(){
 
 		var styleObj ={};
@@ -45,6 +52,10 @@ var ImgFigure = React.createClass({
 			<figure className = {imgFigureClassName} style = {styleObj} onClick={this.handleClick}>
 				<img onClick = {this.handleClick} src = {this.props.data.imageURL} alt = {this.props.data.title} />
 				<hr />
+				<div className = "test" onClick = {this.navNextPage}>
+				<h5>切换到下一个页面</h5>
+				</div>
+	
 				<figcaption>
 					<h2 className = "img-title"> {this.props.data.title}</h2>
 					<div className = "img-back" onClick = {this.handleClick}>
