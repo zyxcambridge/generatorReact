@@ -71,7 +71,16 @@ export default class ThirdPage extends React.Component{
         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
       </Carousel.Caption>
     </Carousel.Item>
+
+        <nav className="linksapp-nav">
+         <Links  />
+        </nav>
+
+    
   </Carousel>
+
+
+
 )
   }
 };
