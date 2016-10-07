@@ -10,6 +10,9 @@ import { Modal } from 'react-bootstrap';
 import { Popover } from 'react-bootstrap';
 import { Tooltip } from 'react-bootstrap';
 import { OverlayTrigger } from 'react-bootstrap';
+import { Collapse } from 'react-bootstrap';
+import { Well } from 'react-bootstrap';
+
 
 
 
@@ -22,9 +25,13 @@ const splashImg = require('../images/ui/general/bg_01.png');
 
 const Home = React.createClass({
   getInitialState() {
-    return { showModal: false };
+    return { showModal: false ,alertVisible: false};
   },
 
+  componentDidMount()
+  {
+  	this.setState({alertVisible: false});
+  },
   close() {
     this.setState({ showModal: false });
   },
@@ -32,8 +39,31 @@ const Home = React.createClass({
   open() {
     this.setState({ showModal: true });
   },
+  handleAlertDismiss() {
+    this.setState({alertVisible: false});
+  },
+
+  handleAlertShow() {
+    this.setState({alertVisible: true});
+  },
 
   render() {
+    if (this.state.alertVisible) {
+      return (
+        <Alert bsStyle="danger" onDismiss={this.handleAlertDismiss}>
+          <h4>Oh snap! You got an error!</h4>
+          <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+          <p>
+            <Button bsStyle="danger">Take this action</Button>
+            <span> or </span>
+            <Button onClick={this.handleAlertDismiss}>Hide Alert</Button>
+          </p>
+        </Alert>
+      );
+    };
+
+	
+
     const popover = (
       <Popover id="modal-popover" title="popover">
         very popover. such engagement
@@ -45,8 +75,25 @@ const Home = React.createClass({
       </Tooltip>
     );
 
+
     return (
       <div>
+        <Button onClick={this.handleAlertShow}>Show Alert</Button>
+      <div>
+        <Button onClick={ ()=> this.setState({ open: !this.state.open })}>
+          click
+        </Button>
+        <Collapse in={this.state.open}>
+          <div>
+            <Well>
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+              Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            </Well>
+          </div>
+        </Collapse>
+      </div>
+
+
         <p>Click to get the full Modal experience!</p>
 
         <Button
