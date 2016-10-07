@@ -12,11 +12,6 @@ import { Tooltip } from 'react-bootstrap';
 import { OverlayTrigger } from 'react-bootstrap';
 import { Collapse } from 'react-bootstrap';
 import { Well } from 'react-bootstrap';
-
-
-
-
-
 import { ButtonToolbar } from 'react-bootstrap';
 var Alert = require('react-bootstrap').Alert;
 
@@ -24,6 +19,7 @@ const splashImg = require('../images/ui/general/bg_01.png');
 
 
 const Home = React.createClass({
+
   getInitialState() {
     return { showModal: false ,alertVisible: false};
   },
@@ -32,6 +28,7 @@ const Home = React.createClass({
   {
   	this.setState({alertVisible: false});
   },
+
   close() {
     this.setState({ showModal: false });
   },
@@ -39,6 +36,7 @@ const Home = React.createClass({
   open() {
     this.setState({ showModal: true });
   },
+
   handleAlertDismiss() {
     this.setState({alertVisible: false});
   },
@@ -48,8 +46,11 @@ const Home = React.createClass({
   },
 
   render() {
+
     if (this.state.alertVisible) {
+
       return (
+
         <Alert bsStyle="danger" onDismiss={this.handleAlertDismiss}>
           <h4>Oh snap! You got an error!</h4>
           <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
@@ -62,8 +63,6 @@ const Home = React.createClass({
       );
     };
 
-	
-
     const popover = (
       <Popover id="modal-popover" title="popover">
         very popover. such engagement
@@ -74,7 +73,6 @@ const Home = React.createClass({
         wow.
       </Tooltip>
     );
-
 
     return (
       <div>
@@ -92,7 +90,6 @@ const Home = React.createClass({
           </div>
         </Collapse>
       </div>
-
 
         <p>Click to get the full Modal experience!</p>
 
@@ -136,9 +133,9 @@ const Home = React.createClass({
           </Modal.Footer>
         </Modal>
 
-		<nav className="navbarzyx">
-		<Links  />
-		</nav>
+    		<nav className="navbarzyx">
+    		<Links  />
+    		</nav>
 
       </div>
     );
